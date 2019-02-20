@@ -1,0 +1,40 @@
+<!-- development version, includes helpful console warnings -->
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{ message }}
+        </div>
+        <div id="app-2">
+            <span v-bind:title="message">
+              Hover for page load time!
+            </span>
+        </div>
+        <div id="app-3">
+            <transition name="fade">
+                <p v-if="seen">
+                    Now you see me (set app3.seen=false to remove)
+                </p>
+            <transition/>
+        </div>
+        <div id="app-4">
+            <ol>
+                <li v-for="todo1 in todos1">
+                  {{ todo1.text }}
+                </li>
+            </ol>
+        </div>
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+        <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
