@@ -1,0 +1,21 @@
+<!-- development version, includes helpful console warnings -->
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>
+                Using mustaches: {{ rawHtml }}
+            </p>
+            <p>
+                Using v-html directive: <span v-html="rawHtml"></span>
+            </p>
+        </div>
+        <div id="app2">
+            <a v-bind:[attr_name]="urlLink">Website</a>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

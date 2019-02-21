@@ -1,0 +1,66 @@
+# Template-Syntax
+
+## Mustaches
+
+This is a very large part of the vue.js template syntax.
+
+----
+{{ property }}
+----
+
+These can be placed anywhere where text can be. Additionally their values can be referenced from inside of HTML tag attributes by using the v-bind directive.
+
+[source,html]
+----
+<img v-bind:src="property">Image</img>
+----
+
+### JavaScript expressions inside
+
+Additionally JavaScript may be used inside of the mustaches.
+
+----
+{{ property.split('').reverse().join('') }}
+----
+
+Or with the v-bind directive.
+
+[source,html]
+----
+<img v-bind:src="domain + path">Image</img>
+----
+
+JavaScript actions are limited to expressions, variable assignment and flow control is not supported.
+
+## Directives
+
+Another large part of vue.js is directives, which are special html tag attributes with a `v-` prefix.
+
+Directives allow you to affect change on html tag attributes in various ways.
+
+### Argument Assignment
+
+This is similar to what has been previously documented above, where you affect the argument to a html attribute.
+
+[source,html]
+----
+<img v-bind:src="domain + path">Image</img>
+----
+
+the above concatenates the `domain` and `path` application variables and assigns it to the `src` attribute of the `img` tag.
+
+[source,html]
+----
+<img src="example.com/example/path.jpg">Image</img>
+----
+
+### Dynamic Arguments
+
+This is different in that the html tag `attribute` and its `argument` are both affected.
+
+[source,html]
+----
+<a v-bind:[attributeName]="url">My Link</a>
+----
+
+This interprets the attribute from the associated vue instance `attributeName` parameter, and the argument from the `url` parameter.

@@ -1,0 +1,3 @@
+# lifecycle reference:
+
+link:https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram[Life Cycle Diagram]
