@@ -1,4 +1,6 @@
-= Computed Properties
+= Computed/Watched
+
+== Computed Properties
 
 We have understood the process of bringing in variables from our Vue instance from its internal `data` object into our HTML temlate.
 
@@ -21,3 +23,23 @@ include::index.js[]
 ----
 
 This allows us to seperate our JavaScript from our HTML as much as possible.
+
+[NOTE]
+====
+The following should be noted about using computed properties.
+
+. Computed Properties depend on their `data` property.  any changes to the `data` property changes the `computed` property is likewise updated.
+. Computed Properties cache, unless a dependency is updated, the last computed value will be used.
+====
+
+=== Computed Setter Property
+
+Most computed properties are getter-only, but you can also provide setters if needed.  For more information see the link below.
+
+Example: link:https://vuejs.org/v2/guide/computed.html#Computed-Setter[Computed Setter]
+
+== Watched Properties
+
+In addition to `computed` and `data` the Vue instance also contains `watched` properties.
+
+NOTE: It is often better to use a `computed` property than a `watched` one.
