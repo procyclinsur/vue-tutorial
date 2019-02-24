@@ -1,0 +1,23 @@
+= Computed Properties
+
+We have understood the process of bringing in variables from our Vue instance from its internal `data` object into our HTML temlate.
+
+This can get unwieldy when you need to perform computations on these variables, and perhaps use these computations multiple times.  This is where Computed Properties come into play.
+
+Like `data`, `computed` is another object found within the Vue instance.  It consists of variables, each with a function that returns some computed value.
+
+.index.html
+[source, html]
+----
+include::index.html[]
+----
+
+In the above file, instead of performing the JavaScript to reverse the message within the template block, we have created a new `reversedMessage` variable within our Vue instance to perform the processing.
+
+.index.js
+[source, js]
+----
+include::index.js[]
+----
+
+This allows us to seperate our JavaScript from our HTML as much as possible.
