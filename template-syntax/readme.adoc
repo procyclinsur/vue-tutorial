@@ -64,3 +64,31 @@ This is different in that the html tag `attribute` and its `argument` are both a
 ----
 
 This interprets the attribute from the associated vue instance `attributeName` parameter, and the argument from the `url` parameter.
+
+NOTE: camelCase attribute names do not work for in-DOM templates. For these template types, use lowercase, or snake_case.
+
+### Shortcut directives
+
+Vue.js provides written shortcuts for the v-bind and v-on directives.
+
+* v-bind
++
+[source, html]
+----
+<!-- v-bind shorthand -->
+<a :href="url">...</a>
+
+<!-- dynamic argument shorthand -->
+<a :[key]="url">...</a>
+----
+
+* v-on
++
+[source, html]
+----
+<!-- v-on shorthand -->
+<a @click="doSomething">...</a>
+
+<!-- dynamic input shorthand -->
+<a @[event]="doSomething">...</a>
+----
