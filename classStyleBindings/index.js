@@ -40,7 +40,8 @@ var vm3 = new Vue ({
 // NEED TO REVISIT THIS SECTION LATER FOR COMPONENTS LOGIC
 
 // Binding Inline Styles:
-// Data Style Object example
+// Data Style Object example... Style object can also be used
+// with computed properties block.
 var vm4 = new Vue ({
   el: "#app4",
   data: {
@@ -50,3 +51,7 @@ var vm4 = new Vue ({
     }
   }
 })
+
+// My opinion is to limit what goes in the HTML template
+// to do so, either styleObjects or computed properties
+// should be used.
