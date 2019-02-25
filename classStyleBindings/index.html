@@ -1,0 +1,26 @@
+<!-- development version, includes helpful console warnings -->
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app"
+            class="static"
+            :class="classObject"
+        >hello app</div>
+        <div id="app2"
+            class="static"
+            :class="classObject"
+        <script src="index.js"></script>
+        >hello app2</div>
+        <div id="app3"
+            class="static"
+            :class="[{ active: isActive }, errorClass]"
+        >hello app3</div>
+        <div id="app4"
+            :style="styleObject"
+        >hello red text!!</div>
+        <script src="index.js"></script>
+    </body>
+</html>
