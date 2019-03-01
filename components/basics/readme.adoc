@@ -1,0 +1,16 @@
+= Components
+
+== Organizing Components
+
+Components can be organized and further contain other components.  Before this can be realized, a component registry must be created.
+
+There are two types of component registries, `global` and `local`.
+
+Components are registered globally by using
+
+[source, js]
+----
+Vue.component('my-component-name', {
+  // ... options ...
+})
+----

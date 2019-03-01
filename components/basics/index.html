@@ -1,0 +1,28 @@
+<!-- development version, includes helpful console warnings -->
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="components">
+          <div :style="{ fontSize: postFontSize + 'em' }">
+            <title-header
+              v-for="post in posts"
+              :key="post.id"
+              :post="post"
+              v-on:enlarge-text="onEnlargeText"
+            ></title-header>
+            <button-counter></button-counter>
+          </div>
+        </div>
+        <div><p></p></div>
+        <div id="app">
+          <custom-input v-model="searchText"></custom-input>
+          <alert-box>
+            Failure to comply.
+          </alert-box>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
