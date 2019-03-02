@@ -14,3 +14,17 @@ Vue.component('my-component-name', {
   // ... options ...
 })
 ----
+
+== Dynamic Components
+
+Created using the following syntax for changing component types dynamically.
+
+[source,html]
+----
+<component
+  v-bind:is="currentTabComponent"
+  class="tab"
+></component>
+----
+
+more link:https://jsfiddle.net/chrisvfritz/o3nycadu/[here].
